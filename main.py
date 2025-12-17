@@ -18,7 +18,6 @@ bestandsnaam = "metingen.csv"
 
 
 def print_csv():
-    """Print de inhoud van het CSV-bestand via USB/serial."""
 
     try:
         with open(bestandsnaam, "r") as f:
@@ -46,7 +45,7 @@ while True:
         #print(waarde_LS)   # LS
         #print(waarde_SMS)   # SMS
         #print(f"{temp:.2f},{hum:.2f}")
-        #print("-----------------------")
+        #print("")
 
         # Check of CSV bestand al bestaat
         if bestandsnaam not in os.listdir():
@@ -76,7 +75,7 @@ while True:
         teller = teller + 1
 
         #print(teller, old_teller)
-        
+
     except OSError as e:
 
         print("Fout bij lezen van sensor:", e)
